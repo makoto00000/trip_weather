@@ -19,7 +19,6 @@ URL: <>
 
 - Next.js 14.1.0
 - Prisma 5.15.0
-- Docker
 
 ### デプロイ先
 

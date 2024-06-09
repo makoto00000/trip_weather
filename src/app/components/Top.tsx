@@ -43,7 +43,7 @@ export default function Top({
   };
 
   return (
-    <div className="lg:container bg-content-background rounded-md flex justify-center items-center flex-col p-10 shadow-lg">
+    <div className="bg-content-background rounded-md flex justify-center items-center flex-col p-10 shadow-lg relative max-w-screen-md">
       <div className="flex mb-10">
         <div className="font-kanit fontweight-bold font text-5xl mr-4">
           Trip

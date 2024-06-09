@@ -140,3 +140,28 @@ export type WeatherData = {
   conditions: string;
   icon: string;
 };
+
+export const translatedWeathers: { [key: string]: string } = {
+  clearday: "晴れ",
+  clearnight: "晴れ",
+  cloudy: "曇り",
+  fog: "霧",
+  hail: "あられ",
+  partlycloudyday: "晴れときどき曇り",
+  partlycloudynight: "晴れとくどき曇り",
+  rainsnowshowersday: "雨、雪、にわか雨",
+  rainsnowshowersnight: "雨、雪、にわか雨",
+  rainsnow: "雨雪",
+  rain: "雨",
+  showersday: "にわか雨",
+  showersnight: "にわか雨",
+  sleet: "みぞれ",
+  snowshowersday: "にわか雪",
+  snowshowersnight: "にわか雪",
+  snow: "雪",
+  thunderrain: "雷雨",
+  thundershowersday: "雷雨",
+  thundershowersnight: "雷雨",
+  thunder: "雷",
+  wind: "強風",
+};

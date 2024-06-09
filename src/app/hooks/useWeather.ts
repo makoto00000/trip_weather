@@ -1,13 +1,9 @@
 import { Weather } from "@prisma/client";
 import { useState } from "react";
 
-export default function useWeather() {
-  const [isLoading, setIsLoading] = useState(false);
-  const [weather, setWeather] = useState<Weather | null | undefined>();
-  const handleIsLoading = (value: boolean) => {
-    setIsLoading(value);
-  };
+export default function useWeather(handleIsLoading: (value: boolean) => void) {
 
+  const [weather, setWeather] = useState<Weather | null | undefined>();
   const handleFetchWeather = async (data: {
     datetime: string;
     address: string;
@@ -33,8 +29,6 @@ export default function useWeather() {
   };
 
   return {
-    isLoading,
-    handleIsLoading,
     weather,
     handleFetchWeather,
     clearWeather,

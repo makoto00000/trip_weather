@@ -2,7 +2,7 @@
 
 ## アプリ概要
 
-URL: <>
+URL: <https://trip-weather-gamma.vercel.app/>
 
 ![trip_weather_top](https://github.com/makoto00000/trip_weather/assets/65654634/f98764eb-c0b7-473c-a41e-2615836efb39)
 

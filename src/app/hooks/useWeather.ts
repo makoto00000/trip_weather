@@ -3,7 +3,7 @@ import { useState } from "react";
 
 export default function useWeather() {
   const [isLoading, setIsLoading] = useState(false);
-  const [weather, setWeather] = useState<Weather | null>(null);
+  const [weather, setWeather] = useState<Weather | null | undefined>();
   const handleIsLoading = (value: boolean) => {
     setIsLoading(value);
   };
@@ -27,10 +27,16 @@ export default function useWeather() {
     setWeather(fetchData.weather);
     handleIsLoading(false);
   };
-  return{
+
+  const clearWeather = () => {
+    setWeather(undefined);
+  };
+
+  return {
     isLoading,
     handleIsLoading,
     weather,
     handleFetchWeather,
-  }
+    clearWeather,
+  };
 }

@@ -20,7 +20,7 @@ export default function Tourist({
     clearTouristInfo();
   };
   return (
-    <div className="bg-content-background rounded-md flex justify-center items-center flex-col p-10 pb-20 shadow-lg relative max-w-screen-md">
+    <div className="bg-content-background rounded-md flex justify-center items-center flex-col p-10 pb-20 shadow-lg relative max-w-screen-md max-h-full">
       <div className="w-full flex mb-5 text-lg font-bold">
         <div className="mr-5">{displayDate(weather.datetime)}</div>
         <div className="mr-5">{weather.address}</div>
@@ -29,18 +29,18 @@ export default function Tourist({
       <div className="w-full bg-background shadow-inner p-5 overflow-scroll rounded-md font-bold text-lg mb-16">
         {touristInfo}
       </div>
-      <div className="w-full flex justify-start md:justify-center items-center">
+      <div className="flex justify-start md:justify-center items-center">
         <Button
           className="cursor-pointer"
           onClick={handleReset}
           type="button"
           variant="contained"
-          sx={{ background: "#4C6B8A", ":hover": { background: "#6E93B8" }}}
+          sx={{ background: "#4C6B8A", ":hover": { background: "#6E93B8" } }}
         >
           他の旅先も調べる
         </Button>
       </div>
-      <div className="w-full flex justify-end absolute bottom-10 pr-10">
+      <div className="flex absolute bottom-10 pr-10 right-0">
         <div className="relative h-full">
           <Image
             className="max-w-32 lg:max-w-40"

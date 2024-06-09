@@ -28,7 +28,7 @@ export default function Result({
             alt="weather_logo"
           ></Image>
           <div className="flex justify-center items-center">
-            <div className="text-4xl font-bold mr-4">
+            <div className="text-5xl font-bold mr-4">
               {weather.temp}
               <span className="text-2xl font-bold">℃</span>
             </div>
@@ -44,59 +44,64 @@ export default function Result({
             </div>
           </div>
         </div>
-        <div className="w-4/12">
-          <table className="w-full">
-            <tbody>
-              <tr className="border-t-2 flex justify-between items-center w-full p-4">
-                <td className="flex justify-center items-center text-xl font-bold">
-                  降水確率
-                  <Image
-                    className="ml-2"
-                    src="/rain.png"
-                    width={50}
-                    height={50}
-                    alt="rain"
-                  ></Image>
-                </td>
-                <td className="text-xl font-bold">
-                  {weather.precipprob}
-                  <span className="text-sm font-bold ml-2">%</span>
-                </td>
-              </tr>
-              <tr className="border-t-2 flex justify-between items-center w-full p-4">
-                <td className="flex justify-center items-center text-xl font-bold">
-                  UV指数
-                  <Image
-                    className="ml-2"
-                    src="/uv.png"
-                    width={50}
-                    height={50}
-                    alt="rain"
-                  ></Image>
-                </td>
-                <td className="text-xl font-bold">
-                  {weather.uvindex}
-                  <span className="text-sm font-bold ml-2">%</span>
-                </td>
-              </tr>
-              <tr className="border-t-2 flex justify-between items-center w-full border-b-2 p-4">
-                <td className="flex justify-center items-center text-xl font-bold">
-                  風速
-                  <Image
-                    className="ml-2"
-                    src="/wind.png"
-                    width={50}
-                    height={50}
-                    alt="rain"
-                  ></Image>
-                </td>
-                <td className="text-xl font-bold">
-                  {weather.windspeed}
-                  <span className="text-sm font-bold ml-2">%</span>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+        <div className="w-6/12">
+
+          <div className="border-t-2 grid grid-cols-6 p-4">
+            <div className="col-span-3 text-xl font-bold grid grid-cols-3 gap-4 place-items-center">
+              <div className="col-span-2 place-content-center">降水確率</div>
+              <Image
+                className="col-start-3"
+                src="/rain.png"
+                width={50}
+                height={50}
+                alt="rain"
+              />
+            </div>
+            <div className="text-2xl font-bold col-start-5 col-span-2 place-content-center grid grid-cols-2">
+              <div className={"text-right"}>
+              {weather.precipprob}
+              </div>
+              <span className="text-sm font-bold ml-2 text-left place-content-end">%</span>
+            </div>
+          </div>
+          <div className="border-t-2 grid grid-cols-6 p-4">
+            <div className="col-span-3 text-xl font-bold grid grid-cols-3 gap-4 place-items-center">
+              <div className="col-span-2 place-content-center">UV指数</div>
+              <Image
+                className="col-start-3"
+                src="/uv.png"
+                width={50}
+                height={50}
+                alt="uv"
+              />
+            </div>
+            <div className="text-2xl font-bold col-start-5 col-span-2 place-content-center grid grid-cols-2">
+              <div className={"text-right"}>
+              {weather.uvindex}
+              </div>
+              <span className="text-sm font-bold ml-2 text-left place-content-end"></span>
+            </div>
+          </div>
+          <div className="border-t-2 border-b-2 grid grid-cols-6 p-4">
+            <div className="col-span-3 text-xl font-bold grid grid-cols-3 gap-4 place-items-center">
+              <div className="col-span-2 place-content-center">風速</div>
+              <Image
+                className="col-start-3"
+                src="/wind.png"
+                width={50}
+                height={50}
+                alt="wind"
+              />
+            </div>
+            <div className="text-2xl font-bold col-start-5 col-span-2 place-content-center grid grid-cols-2">
+              <div className={"text-right"}>
+              {weather.windspeed}
+              </div>
+              <span className="text-sm font-bold ml-2 text-left place-content-end">m/s</span>
+            </div>
+          </div>
+
+
         </div>
       </div>
       <div>

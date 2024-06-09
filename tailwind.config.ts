@@ -23,7 +23,27 @@ const config: Config = {
       },
       fontFamily: {
         kanit: ["Kanit"]
-      }
+      },
+      keyframes: {
+        zoomIn: {
+          '0%': { transform: 'scale(1)' },
+          '100%': { transform: 'scale(1.1)' },
+        },
+        zoomOut: {
+          '0%': { transform: 'scale(1.1)' },
+          '100%': { transform: 'scale(1)' },
+        },
+      },
+      animation: {
+        zoomIn: 'zoomIn 0.3s ease-in-out forwards',
+        zoomOut: 'zoomOut 0.3s ease-in-out forwards',
+      },
+    },
+    variants: {
+      extend: {
+        animation: ['hover'],
+        cursor: ['hover'],
+      },
     },
   },
   plugins: [],

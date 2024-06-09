@@ -16,7 +16,7 @@ export default function Home() {
     useTourist(handleIsLoading);
 
   return (
-    <div className="flex justify-center items-center w-screen h-screen">
+    <div className="flex justify-center items-center w-screen h-screen pt-10 pb-10">
       {isLoading && <CircularProgress />}
       {!isLoading && weather === undefined && (
         <Top {...{ handleIsLoading, handleFetchWeather }} />

@@ -13,8 +13,8 @@ export default function Result({
   handleTouristInfo: (datetime: Date, address: string, icon: string) => void;
 }) {
   return (
-    <div className="md:container bg-content-background rounded-md flex justify-center items-center flex-col p-10 pb-20 shadow-lg relative">
-      <div className="flex lg:justify-center items-center flex-col lg:flex-row mb-16 w-full lg:w-2/3">
+    <div className="bg-content-background rounded-md flex justify-center items-center flex-col p-10 pb-20 shadow-lg relative max-w-screen-md">
+      <div className="flex lg:justify-center items-center flex-col lg:flex-row mb-16 w-full">
         <div className="flex justify-between items-center flex-col w-full lg:w-1/2 mb-10 lg:mb-0 lg:mr-2">
           <div className="flex mb-4">
             <div className="text-2xl font-bold mr-4">
@@ -46,7 +46,7 @@ export default function Result({
             </div>
           </div>
         </div>
-        <div className="w-full md:w-2/3 lg:w-6/12">
+        <div className="w-full lg:w-1/2">
           <div className="border-t-2 grid grid-cols-6 p-4">
             <div className="col-span-3 text-xl font-bold grid grid-cols-3 gap-4 place-items-center">
               <div className="col-span-2 place-content-center">降水確率</div>
@@ -101,7 +101,7 @@ export default function Result({
           </div>
         </div>
       </div>
-      <div className="w-full flex justify-start md:justify-center items-center">
+      <div className="w-full lg:w-auto flex justify-start lg:justify-center items-center">
         <Button
           className="cursor-pointer"
           onClick={clearWeather}
@@ -112,7 +112,7 @@ export default function Result({
           他の旅先も調べる
         </Button>
       </div>
-      <div className="w-3/4 flex justify-end absolute bottom-10">
+      <div className="flex absolute bottom-10 right-10">
         <div className="relative h-full cursor-pointer animate-zoomOut hover:animate-zoomIn">
           <Image
             className="max-w-32 lg:max-w-40"

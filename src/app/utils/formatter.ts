@@ -4,3 +4,8 @@ export function formatDate(date: Date) {
   const day = String(date.getDate()).padStart(2, "0");
   return `${year}-${month}-${day}`;
 }
+
+export function displayDate(isoDate: Date) {
+  const date = new Date(isoDate);
+  return `${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日`;
+}

@@ -43,7 +43,7 @@ export default function Top({
   };
 
   return (
-    <div className="lg:container bg-content-background rounded-md flex justify-center items-center flex-col p-10">
+    <div className="lg:container bg-content-background rounded-md flex justify-center items-center flex-col p-10 shadow-lg">
       <div className="flex mb-10">
         <div className="font-kanit fontweight-bold font text-5xl mr-4">
           Trip
@@ -61,7 +61,7 @@ export default function Top({
         onSubmit={handleSubmit(onSubmit)}
       >
         <div className="flex flex-col w-96 mb-10">
-          <label className="text-2xl fontweight-bold mb-2">日付</label>
+          <label className="text-2xl fontweight-bold mb-2">日付を入力</label>
           <Controller
             name="datetime"
             control={control}
@@ -80,7 +80,7 @@ export default function Top({
           {errors.datetime && <p className="text-error">{errors.datetime.message as ReactNode}</p>}
         </div>
         <div className="flex flex-col w-96 mb-10">
-          <label className="text-2xl fontweight-bold mb-2">地名</label>
+          <label className="text-2xl fontweight-bold mb-2">地名を入力</label>
 
           <Controller
             name="address"

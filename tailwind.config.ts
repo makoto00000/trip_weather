@@ -18,6 +18,8 @@ const config: Config = {
         "content-background": "#FFFFFF",
         "accent": "#4C6B8A",
         "error": "#EF5050",
+        "high": "#EF5050",
+        "low": "#3678A8", 
       },
       fontFamily: {
         kanit: ["Kanit"]

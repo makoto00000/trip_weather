@@ -9,6 +9,15 @@ URL: <https://trip-weather-gamma.vercel.app/>
 - 地域を選択すると、天気が分かるサービス
 - インターネットに公開して、旅行に行く人が現地の天気を確認する目的で利用。
 
+## 使い方
+
+1. 現在から1週間以内の日付を選択
+2. 地名をアルファベットで入力（都道府県名または都市名 例: Tokyo, Yokohama）
+3. 「旅先の天気をみる」をクリック
+4. 指定した場所の天気情報が表示される
+5. 「この天気のおすすめの観光地を紹介します」をクリック
+6. おすすめの観光地情報が表示される
+
 ## 仕様
 
 - 取得した天気情報はDBに格納して、同じ日の同一地域の天気情報はDBから取得する。
@@ -17,14 +26,21 @@ URL: <https://trip-weather-gamma.vercel.app/>
 
 ### 開発環境
 
-- Next.js 14.1.0
+- Next.js 14.2.3
 - Prisma 5.15.0
+- TypeScript
+- Tailwind CSS
+
+### 主要ライブラリ
+
+- React Hook Form
+- MUI
 
 ### デプロイ先
 
 - Vercel (+ Vercel Postgres)
 
-### その他仕様技術
+### その他使用技術
 
 - [visualcrossing](https://www.visualcrossing.com/)（天気取得API）
 - [ChatGPT](https://openai.com/chatgpt/)（観光地提案機能）
@@ -35,7 +51,6 @@ URL: <https://trip-weather-gamma.vercel.app/>
 
 - 地名、日付から天気情報を取得
 - 取得できる情報は以下
-  - 週間予報
   - 気温（最大/最低）
   - 降水確率
   - 風速
@@ -51,7 +66,7 @@ URL: <https://trip-weather-gamma.vercel.app/>
 | :--------- | :------------- | :------- | :--- | :--- | :------- | :---- | :------ |
 | id         | weather ID     | bigint   | ◯   |      | ◯       | ◯    |         |
 | address    | 地名           | string   |      |      | ◯       | ◯    |         |
-| datetime   | 日時           | string   |      |      | ◯       | ◯    |         |
+| datetime   | 日時           | datetime |      |      | ◯       | ◯    |         |
 | temp       | 気温           | float    |      |      | ◯       |       |         |
 | tempmin    | 最低気温       | float    |      |      | ◯       |       |         |
 | tempmax    | 最高気温       | float    |      |      | ◯       |       |         |
